@@ -134,11 +134,12 @@ export class BasmaStack extends cdk.Stack {
         optionName: "NodeCommand",
         value: "npm start"
       },
-      {
-        namespace: "aws:elasticbeanstalk:container:nodejs",
-        optionName: "ProxyServer",
-        value: "none"
-      }
+      // none does not work
+      // {
+      //   namespace: "aws:elasticbeanstalk:container:nodejs",
+      //   optionName: "ProxyServer",
+      //   value: "none"
+      // }
     ];
 
     const env = new elasticbeanstalk.CfnEnvironment(this, `${applicationName}-environment`, {
