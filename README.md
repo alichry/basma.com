@@ -53,7 +53,7 @@ vim src/backend/.env
 After setting the proper environment variabls in `src/backend/.env`, run the following:
 
 ```sh
-to import the environment variables to your current shell.
+# to import the environment variables to your current shell.
 . ./src/backend/.env
 ```
 
