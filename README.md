@@ -1,8 +1,6 @@
 # Basma.com code challenge
 This is our submission for the Basma code challenge.
 
-To deploy this projet locally, we need to set the proper environment variables.  
-
 ## Features
 - Typescript for type-checking
 - Backend using Express.js/ApolloServer (GraphQL)
