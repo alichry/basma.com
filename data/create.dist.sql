@@ -1,0 +1,9 @@
+CREATE USER IF NOT EXISTS 'basmau'@'localhost' IDENTIFIED BY 'basma:D';
+CREATE USER IF NOT EXISTS 'basmau'@'%' IDENTIFIED BY 'basma:D';
+
+CREATE DATABASE IF NOT EXISTS basma;
+
+GRANT ALL PRIVILEGES ON basma.* TO 'basmau'@'localhost' IDENTIFIED BY 'basma:D';
+GRANT ALL PRIVILEGES ON basma.* TO 'basmau'@'%' IDENTIFIED BY 'basma:D';
+
+FLUSH PRIVILEGES;

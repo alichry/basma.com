@@ -1,0 +1,133 @@
+{
+  "name": "basma.com2",
+  "version": "0.1.0",
+  "private": true,
+  "nodemonConfig": {
+    "exec": "yarn backend:dev",
+    "watch": [
+      "src/backend/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ],
+    "ext": "js,mjs,ts,json"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.11",
+    "@aws-cdk/aws-lambda": "^1.92.0",
+    "@aws-cdk/aws-s3": "^1.92.0",
+    "@fontsource/roboto": "^4.2.2",
+    "@hookform/resolvers": "^1.3.5",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/data-grid": "^4.0.0-alpha.22",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "apollo-server": "^2.21.1",
+    "apollo-server-express": "^2.21.1",
+    "aws-cdk": "^1.92.0",
+    "aws-sdk": "^2.860.0",
+    "bcryptjs": "^2.4.3",
+    "body-parse": "^0.1.0",
+    "connected-react-router": "^6.9.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "file-type": "^16.3.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mailgun-js": "^0.22.0",
+    "material-ui-dropzone": "^3.5.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hook-form": "^6.15.4",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux-persist": "^6.0.0",
+    "typesafe-actions": "^5.1.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "frontend:start": "react-scripts start",
+    "frontend:build": "react-scripts build",
+    "frontend:test": "react-scripts test",
+    "frontend:eject": "react-scripts eject",
+    "backend:transpile": "babel --extensions .ts ./src/backend --out-dir dist",
+    "backend:clean": "rimraf dist",
+    "backend:build": "npm-run-all backend:clean backend:transpile",
+    "backend:server": "node ./dist/bin/www.js",
+    "backend:dev": "NODE_ENV=development npm-run-all backend:build backend:server",
+    "backend:prod": "NODE_ENV=production npm-run-all backend:build backend:server",
+    "backend:start": "npm run backend:prod",
+    "backend:watch:dev": "nodemon",
+    "frontend:build:mv": "rm -rf ./dist/public && mv ./build ./dist/public",
+    "cron:setup": "./setupcron.sh",
+    "start": "NODE_ENV=production npm-run-all cron:setup backend:build frontend:build frontend:build:mv backend:server"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/bcrypt": "^3.0.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/debug": "^4.1.5",
+    "@types/express-rate-limit": "^5.1.1",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mailgun-js": "^0.22.11",
+    "@types/morgan": "^1.9.2",
+    "@types/react-redux": "^7.1.16",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint": "^7.22.0",
+    "eslint-plugin-react": "^7.22.0",
+    "nodemon": "^2.0.7",
+    "redux-devtools-extension": "^2.13.9",
+    "rimraf": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
+    ]
+  }
+}
