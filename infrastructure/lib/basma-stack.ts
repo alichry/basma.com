@@ -129,11 +129,11 @@ export class BasmaStack extends cdk.Stack {
         optionName: "InstanceTypes",
         value: "t3.small",
       },
-      {
-        namespace: "aws:elasticbeanstalk:container:nodejs",
-        optionName: "NodeCommand",
-        value: "npm start"
-      },
+      // {
+      //   namespace: "aws:elasticbeanstalk:container:nodejs",
+      //   optionName: "NodeCommand",
+      //   value: "npm start"
+      // },
       // none does not work
       // {
       //   namespace: "aws:elasticbeanstalk:container:nodejs",
