@@ -6,6 +6,7 @@ This is our submission for the Basma code challenge.
 - Backend using Express.js/ApolloServer (GraphQL)
 - Backend serves the react frontend
 - React.js frontend with Material UI and Redux
+- Images uploaded to S3
 - Rate limiting instead of captcha
 - Mailgun for email verification
 - Cronjob configured automatically when the application is started
