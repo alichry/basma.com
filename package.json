@@ -79,7 +79,7 @@
     "frontend:build:mv": "rm -rf ./dist/public && mv ./build ./dist/public",
     "cron:setup": "./setupcron.sh",
     "setup:db": "node ./dist/bin/setupdb.js",
-    "start": "NODE_ENV=production npm-run-all setup:db cron:setup backend:build frontend:build frontend:build:mv backend:server"
+    "start": "NODE_ENV=production npm-run-all cron:setup backend:build setup:db frontend:build frontend:build:mv backend:server"
   },
   "eslintConfig": {
     "extends": [
