@@ -10,7 +10,7 @@ This is our submission for the Basma code challenge.
 - Rate limiting instead of captcha
 - Mailgun for email verification
 - Cronjob configured automatically when the application is started
-- Infrastructure As Code using AWS CDK to bootstrap all the required services
+- Infrastructure as Code using AWS CDK to bootstrap all the required services
 - Backend search processing and filtering
 
 ## Deploying the application on AWS
