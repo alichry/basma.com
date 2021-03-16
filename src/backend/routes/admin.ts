@@ -39,7 +39,7 @@ router.post('/login', createLimiter(), (req, res) => {
     .catch(err => handleException(res, err));
 });
 
-router.get('/image/:key', (req, res) => {
+router.get('/image/:key', authMiddleware, (req, res) => {
   const key: string | undefined = req.params.key;
   if (! key) {
     res.status(400).json({ message: "Malformed request"});
